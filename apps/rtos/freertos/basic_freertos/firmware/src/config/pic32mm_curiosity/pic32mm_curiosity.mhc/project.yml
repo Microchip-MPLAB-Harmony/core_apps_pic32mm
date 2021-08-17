@@ -69,13 +69,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 972E955D94A63BA89BF6ABD6AADB1023
-- generatedChecksum: 94D7F7A9AF9F6C44F653D6374EA9DA06
+- generatedChecksum: 895578E318951AED3D10B79912DB933A
   logicalPath: config/pic32mm_curiosity
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 94D7F7A9AF9F6C44F653D6374EA9DA06
+  userChecksum: 895578E318951AED3D10B79912DB933A
 - generatedChecksum: 40EE429B9A5E0D7D4145B6C9C52E84DA
   logicalPath: config/pic32mm_curiosity
   name: interrupts.c
@@ -104,13 +104,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: DE2D196926E92D71D961D73C85DDEE65
+- generatedChecksum: D864665CBB58E30F9FB47FE6EF29141D
   logicalPath: config/pic32mm_curiosity/peripheral/clk
   name: plib_clk.c
   physicalPath: peripheral/clk
   security: NON_SECURE
   type: SOURCE
-  userChecksum: DE2D196926E92D71D961D73C85DDEE65
+  userChecksum: D864665CBB58E30F9FB47FE6EF29141D
 - generatedChecksum: E5A7EF8E375994F637F1A71E6F32E529
   logicalPath: config/pic32mm_curiosity/peripheral/evic
   name: plib_evic.c
@@ -118,13 +118,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: E5A7EF8E375994F637F1A71E6F32E529
-- generatedChecksum: AEBEBA0494834F281AAA27056830CB1D
+- generatedChecksum: 367056863A6B2B7A47EB8DC0B5892822
   logicalPath: config/pic32mm_curiosity/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: AEBEBA0494834F281AAA27056830CB1D
+  userChecksum: 367056863A6B2B7A47EB8DC0B5892822
 - generatedChecksum: 25E51DD4469A699703C800AD6F5515A3
   logicalPath: config/pic32mm_curiosity/peripheral/uart
   name: plib_uart2.c
@@ -230,13 +230,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 05B8EFFF8D8324D384589C384F6A1ADA
-- generatedChecksum: 76016C9804D6DE17B74C92D82294562E
+- generatedChecksum: 7A852268CAA1F0FBB9E75D327532882A
   logicalPath: config/pic32mm_curiosity
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 76016C9804D6DE17B74C92D82294562E
+  userChecksum: 7A852268CAA1F0FBB9E75D327532882A
 - generatedChecksum: 48B661D8C967C6BC397001F10FB43D1D
   logicalPath: FreeRTOS/Source/include
   name: croutine.h
@@ -321,13 +321,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: F71A20BA61477D7082FBF03703A4CD38
-- generatedChecksum: 6AED762AB1C872B18EE2B05C7E222668
+- generatedChecksum: 36CFDF4AD5D53F43CFC636AB6F689530
   logicalPath: config/pic32mm_curiosity/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 6AED762AB1C872B18EE2B05C7E222668
+  userChecksum: 36CFDF4AD5D53F43CFC636AB6F689530
 - generatedChecksum: 93CC14A3CC9AF9F15876EE3C336DD97E
   logicalPath: config/pic32mm_curiosity/peripheral/uart
   name: plib_uart2.h
@@ -419,13 +419,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: F7FD88EB112A8F1860C0817D8F62B117
+- generatedChecksum: EBD6E51AC74F4B4A4AC25BE63E43F94C
   logicalPath: config/pic32mm_curiosity
   name: p32MM0064GPL036.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: F7FD88EB112A8F1860C0817D8F62B117
+  userChecksum: EBD6E51AC74F4B4A4AC25BE63E43F94C
 format_version: v1.0
 libraries: []
 settings:
