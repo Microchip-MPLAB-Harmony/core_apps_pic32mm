@@ -1,11 +1,11 @@
 files:
-- generatedChecksum: 3C13720844166A5D97CF4EAD9DDB9FE2
+- generatedChecksum: null
   logicalPath: ''
   name: app.c
   physicalPath: ../..
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 3C13720844166A5D97CF4EAD9DDB9FE2
+  userChecksum: null
 - generatedChecksum: 5B0ABC7040175601AE3BFF86683325BD
   logicalPath: config/pic32mm_usb_curiosity/bsp
   name: bsp.c
@@ -34,13 +34,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4BBDE3B7B0DAEE2CA5A8F519001D5BFF
-- generatedChecksum: 51E59D15ABA578A6C902509D79946DE3
+- generatedChecksum: D593D196B1544168860390A10DE69717
   logicalPath: config/pic32mm_usb_curiosity
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 51E59D15ABA578A6C902509D79946DE3
+  userChecksum: D593D196B1544168860390A10DE69717
 - generatedChecksum: 8FC4C461D28027463553A1F8A0514D56
   logicalPath: config/pic32mm_usb_curiosity
   name: interrupts.c
@@ -48,20 +48,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 8FC4C461D28027463553A1F8A0514D56
-- generatedChecksum: F81A00E640818EDFB9E79C9BD241AEF4
+- generatedChecksum: null
   logicalPath: ''
   name: main.c
   physicalPath: ../..
   security: NON_SECURE
   type: SOURCE
-  userChecksum: F81A00E640818EDFB9E79C9BD241AEF4
-- generatedChecksum: C793C5032BC4A451CF145154FC436FBD
+  userChecksum: null
+- generatedChecksum: 9D8910B95B943C4D68ECAEBB2BB73D5C
   logicalPath: config/pic32mm_usb_curiosity/peripheral/clk
   name: plib_clk.c
   physicalPath: peripheral/clk
   security: NON_SECURE
   type: SOURCE
-  userChecksum: C793C5032BC4A451CF145154FC436FBD
+  userChecksum: 9D8910B95B943C4D68ECAEBB2BB73D5C
 - generatedChecksum: C760E786396CE94185E53A0CE91AA3A8
   logicalPath: config/pic32mm_usb_curiosity/peripheral/evic
   name: plib_evic.c
@@ -104,13 +104,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 7806B30ECAE0D18D08CD583D8775530D
-- generatedChecksum: 452F7AB915EEA4B1529959D0FF80C3F7
+- generatedChecksum: null
   logicalPath: ''
   name: app.h
   physicalPath: ../..
   security: NON_SECURE
   type: HEADER
-  userChecksum: 452F7AB915EEA4B1529959D0FF80C3F7
+  userChecksum: null
 - generatedChecksum: 2271D58042EA06162EEA3285E2676670
   logicalPath: config/pic32mm_usb_curiosity/bsp
   name: bsp.h
@@ -118,20 +118,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 2271D58042EA06162EEA3285E2676670
-- generatedChecksum: 1A7F0180757018D5263AEB2719946591
+- generatedChecksum: 66232270247656B6DAA04032FCA41BA8
   logicalPath: config/pic32mm_usb_curiosity
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1A7F0180757018D5263AEB2719946591
-- generatedChecksum: 879591008374DDE7A8BC278106FF5D77
+  userChecksum: 66232270247656B6DAA04032FCA41BA8
+- generatedChecksum: FAEBAE3FFCA82EB9C5D51B252E174ED0
   logicalPath: config/pic32mm_usb_curiosity
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 879591008374DDE7A8BC278106FF5D77
+  userChecksum: FAEBAE3FFCA82EB9C5D51B252E174ED0
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/pic32mm_usb_curiosity
   name: device.h
@@ -209,13 +209,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 471535DBA871A956FB7FAC6C66FCD8C1
-- generatedChecksum: 76F98F5D5ED4C2833AE90CDE124BBE1B
+- generatedChecksum: D0226D294D437AF5854104B8AD97C8CE
   logicalPath: config/pic32mm_usb_curiosity/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 76F98F5D5ED4C2833AE90CDE124BBE1B
+  userChecksum: D0226D294D437AF5854104B8AD97C8CE
 - generatedChecksum: 231AB772A01446AB9BCC664483285459
   logicalPath: config/pic32mm_usb_curiosity/peripheral/i2c/master
   name: plib_i2c3_master.h
@@ -279,20 +279,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 2C8543317B3F067432097AB9BD3E8672
-- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
+- generatedChecksum: null
   logicalPath: config/pic32mm_usb_curiosity
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4B3C3EF8A318908A22B78500515C3288
-- generatedChecksum: 85BC9F07F0C6F33EA64CEE00CB73E55D
+  userChecksum: null
+- generatedChecksum: C469F285BA2018DB29C8BEBCBE863C37
   logicalPath: config/pic32mm_usb_curiosity
   name: p32MM0256GPM064.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 85BC9F07F0C6F33EA64CEE00CB73E55D
+  userChecksum: C469F285BA2018DB29C8BEBCBE863C37
 format_version: v1.0
 libraries: []
 settings:
