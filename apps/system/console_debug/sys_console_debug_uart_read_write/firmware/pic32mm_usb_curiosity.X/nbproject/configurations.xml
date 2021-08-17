@@ -8,41 +8,41 @@
         <logicalFolder name="f1"
                        displayName="pic32mm_usb_curiosity"
                        projectFiles="true">
-          <logicalFolder name="f3" displayName="bsp" projectFiles="true">
+          <logicalFolder name="f1" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/pic32mm_usb_curiosity/bsp/bsp.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f4" displayName="driver" projectFiles="true">
+          <logicalFolder name="f2" displayName="driver" projectFiles="true">
             <itemPath>../src/config/pic32mm_usb_curiosity/driver/driver.h</itemPath>
             <itemPath>../src/config/pic32mm_usb_curiosity/driver/driver_common.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f5" displayName="osal" projectFiles="true">
+          <logicalFolder name="f3" displayName="osal" projectFiles="true">
             <itemPath>../src/config/pic32mm_usb_curiosity/osal/osal.h</itemPath>
             <itemPath>../src/config/pic32mm_usb_curiosity/osal/osal_definitions.h</itemPath>
             <itemPath>../src/config/pic32mm_usb_curiosity/osal/osal_impl_basic.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f2" displayName="clk" projectFiles="true">
+          <logicalFolder name="f4" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="evic" projectFiles="true">
+            <logicalFolder name="f2" displayName="evic" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/evic/plib_evic.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/gpio/plib_gpio.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="uart" projectFiles="true">
+            <logicalFolder name="f4" displayName="uart" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/uart/plib_uart_common.h</itemPath>
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/uart/plib_uart3.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f2" displayName="system" projectFiles="true">
+          <logicalFolder name="f5" displayName="system" projectFiles="true">
             <logicalFolder name="f1" displayName="console" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/system/console/sys_console.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="debug" projectFiles="true">
+            <logicalFolder name="f2" displayName="debug" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/system/debug/sys_debug.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="int" projectFiles="true">
+            <logicalFolder name="f3" displayName="int" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/system/int/sys_int.h</itemPath>
               <itemPath>../src/config/pic32mm_usb_curiosity/system/int/sys_int_mapping.h</itemPath>
             </logicalFolder>
@@ -59,6 +59,27 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <logicalFolder name="f1"
+                     displayName="pic32mm_usb_curiosity.mhc"
+                     projectFiles="true">
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/BSP_PIC32MM_USB_Curiosity.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/core.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/project.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/sys_console.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/sys_debug.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/uart3.yml</itemPath>
+      </logicalFolder>
+      <itemPath>Makefile</itemPath>
+      <itemPath>../src/config/pic32mm_usb_curiosity/harmony-manifest-success.yml</itemPath>
+      <itemPath>sys_console_debug_uart_read_write_pic32mm_usb_curiosity.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -78,27 +99,27 @@
         <logicalFolder name="f1"
                        displayName="pic32mm_usb_curiosity"
                        projectFiles="true">
-          <logicalFolder name="f4" displayName="bsp" projectFiles="true">
+          <logicalFolder name="f1" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/pic32mm_usb_curiosity/bsp/bsp.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f2" displayName="clk" projectFiles="true">
+          <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/clk/plib_clk.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="evic" projectFiles="true">
+            <logicalFolder name="f2" displayName="evic" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/evic/plib_evic.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/gpio/plib_gpio.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="uart" projectFiles="true">
+            <logicalFolder name="f4" displayName="uart" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/uart/plib_uart3.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f2" displayName="stdio" projectFiles="true">
+          <logicalFolder name="f3" displayName="stdio" projectFiles="true">
             <itemPath>../src/config/pic32mm_usb_curiosity/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f3" displayName="system" projectFiles="true">
+          <logicalFolder name="f4" displayName="system" projectFiles="true">
             <logicalFolder name="f1" displayName="console" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/system/console/src/sys_console.c</itemPath>
               <itemPath>../src/config/pic32mm_usb_curiosity/system/console/src/sys_console_local.h</itemPath>
@@ -106,11 +127,11 @@
               <itemPath>../src/config/pic32mm_usb_curiosity/system/console/src/sys_console_uart_definitions.h</itemPath>
               <itemPath>../src/config/pic32mm_usb_curiosity/system/console/src/sys_console_uart.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="debug" projectFiles="true">
+            <logicalFolder name="f2" displayName="debug" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/system/debug/src/sys_debug_local.h</itemPath>
               <itemPath>../src/config/pic32mm_usb_curiosity/system/debug/src/sys_debug.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="int" projectFiles="true">
+            <logicalFolder name="f3" displayName="int" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/system/int/src/sys_int.c</itemPath>
             </logicalFolder>
           </logicalFolder>
@@ -122,26 +143,6 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
-    </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <logicalFolder name="f1"
-                     displayName="pic32mm_usb_curiosity.mhc"
-                     projectFiles="true">
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/BSP_PIC32MM_USB_Curiosity.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/core.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/dfp.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/HarmonyCore.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/project.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/sys_console.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/sys_debug.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/uart3.yml</itemPath>
-      </logicalFolder>
-      <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mm_usb_curiosity/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -161,7 +162,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32MM-GPM-0XX_DFP" vendor="Microchip" version="1.3.42"/>
+        <pack name="PIC32MM-GPM-0XX_DFP" vendor="Microchip" version="1.3.47"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -192,13 +193,14 @@
       </makeCustomizationType>
       <C32>
         <property key="additional-warnings" value="true"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mm_usb_curiosity"/>
+                  value="../src;../src/config/pic32mm_usb_curiosity;;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -223,6 +225,7 @@
       </C32-CO>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="false"/>
         <property key="exclude-standard-libraries" value="false"/>
@@ -245,7 +248,7 @@
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros" value=""/>
+        <property key="preprocessor-macros" value=";"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="stack-size" value=""/>
@@ -255,6 +258,7 @@
       </C32-LD>
       <C32CPP>
         <property key="additional-warnings" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -264,7 +268,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mm_usb_curiosity"/>
+                  value="../src;../src/config/pic32mm_usb_curiosity;;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
