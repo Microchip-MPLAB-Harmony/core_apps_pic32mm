@@ -80,7 +80,7 @@
 #pragma config FWDTEN =     OFF
 
 /*** FOSCSEL ***/
-#pragma config FNOSC =      PLL
+#pragma config FNOSC =      FRCDIV
 #pragma config PLLSRC =     FRC
 #pragma config SOSCEN =    OFF
 #pragma config IESO =       ON
@@ -147,10 +147,6 @@ const DRV_USART_INIT drvUsart0InitData =
 
     /* USART Client Objects Pool */
     .clientObjPool = (uintptr_t)&drvUSART0ClientObjPool[0],
-
-    .dmaChannelTransmit = SYS_DMA_CHANNEL_NONE,
-
-    .dmaChannelReceive = SYS_DMA_CHANNEL_NONE,
 
     /* Combined size of transmit and receive buffer objects */
     .bufferObjPoolSize = DRV_USART_QUEUE_SIZE_IDX0,

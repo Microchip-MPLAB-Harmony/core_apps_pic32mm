@@ -1,6 +1,6 @@
 ---
 parent: Harmony 3 driver and system service application examples for PIC32MM family
-title: USART driver asynchronous - USART echo 
+title: USART driver asynchronous - USART echo
 has_children: false
 has_toc: false
 ---
@@ -44,7 +44,7 @@ The following table shows the target hardware for the application projects.
 ### Setting up [PIC32MM USB Curiosity board](https://www.microchip.com/DevelopmentTools/ProductDetails/DM320107)
 
 - Connect micro USB cable to the 'USB1' connector on the board to the computer
-- Install the [USB UART click](https://www.mikroe.com/usb-uart-click) board on to the mikroBUS socket J12 of [PIC32MM USB Curiosity board](https://www.microchip.com/DevelopmentTools/ProductDetails/DM320107)
+- Install the [USB UART click](https://www.mikroe.com/usb-uart-click) board on to the mikroBUS socket J4 of [PIC32MM USB Curiosity board](https://www.microchip.com/DevelopmentTools/ProductDetails/DM320107)
 - Connect mini USB cable to the [USB UART click](https://www.mikroe.com/usb-uart-click) board. This will enumerate the USB to UART port
 - **Note:** Ensure that the series resistors on the mikroBUS headers are of value 0 Ohms
 
