@@ -8,7 +8,7 @@
         <logicalFolder name="f1"
                        displayName="pic32mm_usb_curiosity"
                        projectFiles="true">
-          <logicalFolder name="f3" displayName="bsp" projectFiles="true">
+          <logicalFolder name="f1" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/pic32mm_usb_curiosity/bsp/bsp.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="driver" projectFiles="true">
@@ -19,35 +19,35 @@
             <itemPath>../src/config/pic32mm_usb_curiosity/driver/driver.h</itemPath>
             <itemPath>../src/config/pic32mm_usb_curiosity/driver/driver_common.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f5" displayName="osal" projectFiles="true">
+          <logicalFolder name="f3" displayName="osal" projectFiles="true">
             <itemPath>../src/config/pic32mm_usb_curiosity/osal/osal.h</itemPath>
             <itemPath>../src/config/pic32mm_usb_curiosity/osal/osal_definitions.h</itemPath>
             <itemPath>../src/config/pic32mm_usb_curiosity/osal/osal_freertos.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f2" displayName="clk" projectFiles="true">
+          <logicalFolder name="f4" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="evic" projectFiles="true">
+            <logicalFolder name="f2" displayName="evic" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/evic/plib_evic.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/gpio/plib_gpio.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="uart" projectFiles="true">
+            <logicalFolder name="f4" displayName="uart" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/uart/plib_uart_common.h</itemPath>
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/uart/plib_uart3.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f4" displayName="system" projectFiles="true">
-            <logicalFolder name="f3" displayName="debug" projectFiles="true">
+          <logicalFolder name="f5" displayName="system" projectFiles="true">
+            <logicalFolder name="f1" displayName="debug" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/system/debug/sys_debug.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f2" displayName="dma" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/system/dma/sys_dma.h</itemPath>
               <itemPath>../src/config/pic32mm_usb_curiosity/system/dma/sys_dma_mapping.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="int" projectFiles="true">
+            <logicalFolder name="f3" displayName="int" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/system/int/sys_int.h</itemPath>
               <itemPath>../src/config/pic32mm_usb_curiosity/system/int/sys_int_mapping.h</itemPath>
             </logicalFolder>
@@ -96,6 +96,27 @@
       </logicalFolder>
       <itemPath>../src/app_usart_echo.h</itemPath>
     </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <logicalFolder name="f1"
+                     displayName="pic32mm_usb_curiosity.mhc"
+                     projectFiles="true">
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/BSP_PIC32MM_USB_Curiosity.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/core.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/drv_usart.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/FreeRTOS.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/project.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/uart3.yml</itemPath>
+      </logicalFolder>
+      <itemPath>Makefile</itemPath>
+      <itemPath>../src/config/pic32mm_usb_curiosity/harmony-manifest-success.yml</itemPath>
+      <itemPath>usart_echo_sync_pic32mm_usb_curiosity.mc3</itemPath>
+    </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
@@ -114,7 +135,7 @@
         <logicalFolder name="f1"
                        displayName="pic32mm_usb_curiosity"
                        projectFiles="true">
-          <logicalFolder name="f4" displayName="bsp" projectFiles="true">
+          <logicalFolder name="f1" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/pic32mm_usb_curiosity/bsp/bsp.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="driver" projectFiles="true">
@@ -123,31 +144,31 @@
               <itemPath>../src/config/pic32mm_usb_curiosity/driver/usart/src/drv_usart_local.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f6" displayName="osal" projectFiles="true">
+          <logicalFolder name="f3" displayName="osal" projectFiles="true">
             <itemPath>../src/config/pic32mm_usb_curiosity/osal/osal_freertos.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f2" displayName="clk" projectFiles="true">
+          <logicalFolder name="f4" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/clk/plib_clk.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="evic" projectFiles="true">
+            <logicalFolder name="f2" displayName="evic" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/evic/plib_evic.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/gpio/plib_gpio.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="uart" projectFiles="true">
+            <logicalFolder name="f4" displayName="uart" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/peripheral/uart/plib_uart3.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f3" displayName="stdio" projectFiles="true">
+          <logicalFolder name="f5" displayName="stdio" projectFiles="true">
             <itemPath>../src/config/pic32mm_usb_curiosity/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f5" displayName="system" projectFiles="true">
-            <logicalFolder name="f2" displayName="dma" projectFiles="true">
+          <logicalFolder name="f6" displayName="system" projectFiles="true">
+            <logicalFolder name="f1" displayName="dma" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/system/dma/sys_dma.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="int" projectFiles="true">
+            <logicalFolder name="f2" displayName="int" projectFiles="true">
               <itemPath>../src/config/pic32mm_usb_curiosity/system/int/src/sys_int.c</itemPath>
             </logicalFolder>
           </logicalFolder>
@@ -183,26 +204,6 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app_usart_echo.c</itemPath>
-    </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <logicalFolder name="f1"
-                     displayName="pic32mm_usb_curiosity.mhc"
-                     projectFiles="true">
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/BSP_PIC32MM_USB_Curiosity.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/core.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/dfp.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/drv_usart.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/FreeRTOS.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/HarmonyCore.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/project.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/uart3.yml</itemPath>
-      </logicalFolder>
-      <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mm_usb_curiosity/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -254,13 +255,14 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mm_usb_curiosity;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MM_GPM"/>
+                  value="../src;../src/config/pic32mm_usb_curiosity;;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MM_GPM;../src/third_party/rtos/FreeRTOS/Source/include;;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -283,14 +285,15 @@
         <property key="additional-options-chop-files" value="false"/>
       </C32-AR>
       <C32-AS>
+        <property key="appendMe" value=""/>
         <property key="assembler-symbols" value=""/>
         <property key="enable-symbols" value="true"/>
         <property key="exclude-floating-point-library" value="false"/>
         <property key="expand-macros" value="false"/>
         <property key="extra-include-directories-for-assembler"
-                  value="../src/config/pic32mm_usb_curiosity;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MM_GPM"/>
+                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MM_GPM;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/pic32mm_usb_curiosity;;"/>
         <property key="extra-include-directories-for-preprocessor"
-                  value="../src/config/pic32mm_usb_curiosity;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MM_GPM"/>
+                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MM_GPM;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/pic32mm_usb_curiosity;;"/>
         <property key="false-conditionals" value="false"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
@@ -312,6 +315,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -338,7 +342,7 @@
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros" value=""/>
+        <property key="preprocessor-macros" value=";"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -351,6 +355,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -360,7 +365,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mm_usb_curiosity;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MM_GPM"/>
+                  value="../src;../src/config/pic32mm_usb_curiosity;;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MM_GPM;../src/third_party/rtos/FreeRTOS/Source/include;;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
