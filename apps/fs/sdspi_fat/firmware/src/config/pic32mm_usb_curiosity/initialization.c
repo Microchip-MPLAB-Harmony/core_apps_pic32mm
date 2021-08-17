@@ -80,7 +80,7 @@
 #pragma config FWDTEN =     OFF
 
 /*** FOSCSEL ***/
-#pragma config FNOSC =      PLL
+#pragma config FNOSC =      FRCDIV
 #pragma config PLLSRC =     FRC
 #pragma config SOSCEN =    OFF
 #pragma config IESO =       ON
@@ -121,7 +121,7 @@ const DRV_SDSPI_PLIB_INTERFACE drvSDSPI0PlibAPI = {
     .read = (DRV_SDSPI_PLIB_READ)SPI3_Read,
 
     /* SPI PLIB Transfer Status function */
-    .isBusy = (DRV_SDSPI_PLIB_IS_BUSY)SPI3_IsBusy,
+    .isTransmitterBusy = (DRV_SPI_PLIB_TRANSMITTER_IS_BUSY)SPI3_IsTransmitterBusy,
 
     .transferSetup = (DRV_SDSPI_PLIB_SETUP)SPI3_TransferSetup,
 
@@ -168,11 +168,6 @@ const DRV_SDSPI_INIT drvSDSPI0InitData =
 
     .isFsEnabled            = true,
 
-    /* DMA Channel for Transmit */
-    .txDMAChannel           = SYS_DMA_CHANNEL_NONE,
-
-    /* DMA Channel for Receive */
-    .rxDMAChannel           = SYS_DMA_CHANNEL_NONE,
 };
 
 // </editor-fold>
