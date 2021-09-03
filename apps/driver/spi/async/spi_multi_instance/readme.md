@@ -1,6 +1,6 @@
 ---
 parent: Harmony 3 driver and system service application examples for PIC32MM family
-title: SPI Driver asynchronous - multi instance 
+title: SPI Driver asynchronous - multi instance
 has_children: false
 has_toc: false
 ---
@@ -43,14 +43,14 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up [PIC32MM USB Curiosity board](https://www.microchip.com/DevelopmentTools/ProductDetails/DM320107)
 
-- Connect mini USB cable to the 'USB1' connector on the board to the computer
+- Connect micro USB cable to the 'USB1' connector on the board to the computer
 - Install two [EEPROM 4 Click](https://www.mikroe.com/eeprom-4-click) boards on to the two mikroBUS sockets(J4 & J12) of [PIC32MM USB Curiosity board](https://www.microchip.com/DevelopmentTools/ProductDetails/DM320107)
 - **Note:** Ensure that the series resistors on the mikroBUS headers are of value 0 Ohms
 
 ## Running the Application
 
 1. Build and program the application using its IDE
-2. The LED is turned ON when the data read from the EEPROMs matches with the data written to the EEPROMs 
+2. The LED is turned ON when the data read from the EEPROMs matches with the data written to the EEPROMs
 
 Refer to the following table for LED name:
 
