@@ -1,0 +1,80 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.core_apps_pic32mm_rtos_freertos_basic_freertos_pic32mm_curiosity",
+		"version": "3.1.0",
+		"displayName": "FreeRTOS basic Example for PIC32MM Family",
+		"projectName": "basic_freertos_pic32mm_curiosity",
+		"shortDescription": "This example application blinks an LED to show the FreeRTOS threads that are running and to indicate status.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.45.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.50.0"
+			}
+		],
+		"dfp": {
+			"name": "PIC32MM_GPM_DFP",
+			"semverRange": "^1.3.57"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.7.0"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "PIC32MM0064GPL036",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit",
+				"PIC32MM Curiosity Board"
+			],
+			[
+				"Harmony",
+				"RTOS",
+				"FreeRTOS",
+				"BASIC_FREERTOS"
+			],
+			[
+				"RTOS",
+				"FreeRTOS",
+				"BASIC_FREERTOS"
+			]
+		],
+		"peripherals": [
+			"BASIC_FREERTOS"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"RTOS",
+			"FreeRTOS",
+			"PIC32MM0064GPL036",
+			"PIC32MM Family"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
