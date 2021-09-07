@@ -15,7 +15,7 @@ This example application demonstrates context switching between different tasks 
 
 This demonstration creates four tasks each of differen priority. Task1 has the lowest priority, followed by Task2, Task3 and Task4 which has the highest priority. Task1 and Task2 run periodically. 
 
-Task3 blocks until a character is received on UART terminal. Task3 registers a read callback with the UART PLIB and blcoks on a UART receive semaphore. The semaphore is given from the registered callback which is called when a character is receved on the terminal. 
+Task3 blocks until a character is received on UART terminal. Task3 registers a read callback with the UART PLIB and blocks on a UART receive semaphore. The semaphore is given from the registered callback which is called when a character is receved on the terminal. 
 
 Task4 blocks until a user switch is pressed. Task4 registers a change notification callback for the switch press event with the GPIO peripheral and then blocks on the switch press semaphore. The semaphore is given from the registered callback which is called when the switch is pressed.
 
