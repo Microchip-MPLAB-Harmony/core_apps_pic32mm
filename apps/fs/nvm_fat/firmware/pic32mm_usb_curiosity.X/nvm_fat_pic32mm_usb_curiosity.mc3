@@ -1,4 +1,4 @@
-<config configName="pic32mm_usb_curiosity" projectName="nvm_fat_pic32mm_usb_curiosity" configVersion="1.1" device="PIC32MM0256GPM064" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.2.4">
+<config configName="pic32mm_usb_curiosity" projectName="nvm_fat_pic32mm_usb_curiosity" configVersion="1.1" device="PIC32MM0256GPM064" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.2">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -35,7 +35,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.0"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -479,8 +479,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;302&quot; canvasWidth=&quot;672&quot; dnOrder=&quot;0&quot;/&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;BSP_PIC32MM_USB_Curiosity&quot; x=&quot;320&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;30&quot; y=&quot;59&quot;/&gt;
@@ -491,6 +490,7 @@
         &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;sys_fs&quot; x=&quot;530&quot; y=&quot;98&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
+    &lt;GraphSettings canvasHeight=&quot;302&quot; canvasWidth=&quot;672&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -1420,7 +1420,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\p32MM0256GPM064.ld</file>
-         <hash>4bb176c2ad37ed7a9370c233ddcdcb6fe292a9686c1f8ee6f631e63eab346089</hash>
+         <hash>b08ab7a492ffa734426f71d5b358132c3863b6c3bfab706f0a7608259882bd6c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\system\fs\fat_fs\file_system\ff.c</file>
@@ -1452,11 +1452,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\peripheral\nvm\plib_nvm.c</file>
-         <hash>59c44e2b4f1e6868291024e5d4350c490f2914f9c5c2a49b6f27699a3d25c780</hash>
+         <hash>1789a2878d891fb27fdc93cf304809470354d1e21726f3939f4ddf8f416a7677</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\initialization.c</file>
-         <hash>39bbc455a41aaccb42bb1896f5b31c901de2fc323ae4c5ab51a29830419ffeb6</hash>
+         <hash>d0ffb3ff799089718f86c97781843a9e0785e7e1957460fd8ed5f73a6aa44f39</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\system\fs\src\sys_fs_media_manager_local.h</file>
@@ -1468,7 +1468,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\peripheral\nvm\plib_nvm.h</file>
-         <hash>be4bc0440ce21f51ea39523b7a683a3e82181e81415817b3894ef0ef3b7525c4</hash>
+         <hash>81d9887e9ab16a0dbe254098c7c71ad9c8495f2d085e516f53d5da7b6b0312ac</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\exceptions.c</file>
@@ -1532,7 +1532,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\toolchain_specifics.h</file>
-         <hash>c86ea57caade552aa8a4e7853594d481930697fdf3549b89ba0f07604894e0e8</hash>
+         <hash>9dfc75809b6eb23cee342231de51f6b382f8f7eabf8a939539cf44c0da32acbc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\driver\memory\src\drv_memory_local.h</file>
@@ -1548,7 +1548,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\peripheral\evic\plib_evic.c</file>
-         <hash>445fc0b35c73b95374439d4248d5c09469f97ab748dae762f7cbb62dd86403b2</hash>
+         <hash>fd5b1e74f36d37988549eddd601db8245ad4ad8ae032b1defbe684e815996a48</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\device.h</file>
@@ -1564,7 +1564,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\stdio\xc32_monitor.c</file>
-         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
+         <hash>a3a259d197561bbe1e22146d2b26a0bc8851b81a3a0a61529724c7cd8811799b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\peripheral\evic\plib_evic.h</file>
@@ -1584,7 +1584,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\system\fs\src\sys_fs.c</file>
-         <hash>43ef58e17742383c1af49126937f4f24585eb0d5a2c60e1a94fb05611974d8b7</hash>
+         <hash>ca021c42833ef8d927a2165d42b8cf0d14ba0739eae48591dbd65b03f6166993</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\system\debug\sys_debug.h</file>

@@ -54,6 +54,7 @@
 // Section: Configuration Bits
 // ****************************************************************************
 // ****************************************************************************
+
 /*** FDEVOPT ***/
 #pragma config SOSCHP =      OFF
 #pragma config ALTI2C =      OFF
@@ -91,6 +92,7 @@
 
 /*** FSEC ***/
 #pragma config CP =         OFF
+
 
 
 
