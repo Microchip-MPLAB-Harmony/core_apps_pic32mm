@@ -93,6 +93,8 @@ void UART3_WriteCallbackRegister( UART_CALLBACK callback, uintptr_t context );
 
 void UART3_ReadCallbackRegister( UART_CALLBACK callback, uintptr_t context );
 
+bool UART3_TransmitComplete( void );
+
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 
