@@ -54,6 +54,7 @@
 // Section: Configuration Bits
 // ****************************************************************************
 // ****************************************************************************
+
 /*** FDEVOPT ***/
 #pragma config SOSCHP =      OFF
 #pragma config ALTI2C =      OFF
@@ -95,6 +96,7 @@
 
 
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Driver Initialization Data
@@ -120,6 +122,9 @@ const DRV_I2C_PLIB_INTERFACE drvI2C0PLibAPI = {
 
     /* I2C PLib Transfer Write Read Add function */
     .writeRead = (DRV_I2C_PLIB_WRITE_READ)I2C3_WriteRead,
+
+    /*I2C PLib Tranfer Abort function */
+    .transferAbort = (DRV_I2C_PLIB_TRANSFER_ABORT)I2C3_TransferAbort,
 
     /* I2C PLib Transfer Status function */
     .errorGet = (DRV_I2C_PLIB_ERROR_GET)I2C3_ErrorGet,

@@ -13,13 +13,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 5B0ABC7040175601AE3BFF86683325BD
-- generatedChecksum: 13F062B063A4F4AE0B19CE872943995B
+- generatedChecksum: B643568B24847C789775A50FF887059B
   logicalPath: config/pic32mm_usb_curiosity/driver/i2c
   name: drv_i2c.c
   physicalPath: driver/i2c/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 13F062B063A4F4AE0B19CE872943995B
+  userChecksum: B643568B24847C789775A50FF887059B
 - generatedChecksum: 37780F17759DED907A0F36E28BFB3136
   logicalPath: config/pic32mm_usb_curiosity/driver/i2c
   name: drv_i2c_local.h
@@ -34,13 +34,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4BBDE3B7B0DAEE2CA5A8F519001D5BFF
-- generatedChecksum: D593D196B1544168860390A10DE69717
+- generatedChecksum: 00EE16F4A07336F0F00DFC6CF96D5E01
   logicalPath: config/pic32mm_usb_curiosity
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: D593D196B1544168860390A10DE69717
+  userChecksum: 00EE16F4A07336F0F00DFC6CF96D5E01
 - generatedChecksum: 8FC4C461D28027463553A1F8A0514D56
   logicalPath: config/pic32mm_usb_curiosity
   name: interrupts.c
@@ -62,13 +62,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 9D8910B95B943C4D68ECAEBB2BB73D5C
-- generatedChecksum: C760E786396CE94185E53A0CE91AA3A8
+- generatedChecksum: 792D24423B963FC43E18235E609A3D00
   logicalPath: config/pic32mm_usb_curiosity/peripheral/evic
   name: plib_evic.c
   physicalPath: peripheral/evic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: C760E786396CE94185E53A0CE91AA3A8
+  userChecksum: 792D24423B963FC43E18235E609A3D00
 - generatedChecksum: 2F793D568C2F1DA037EA3CDD2F03D882
   logicalPath: config/pic32mm_usb_curiosity/peripheral/gpio
   name: plib_gpio.c
@@ -76,13 +76,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 2F793D568C2F1DA037EA3CDD2F03D882
-- generatedChecksum: 2074B0BAAAF9825B7EB8FD374E06CBE4
+- generatedChecksum: 0A9C13B3A369C2F976D788D204677E33
   logicalPath: config/pic32mm_usb_curiosity/peripheral/i2c/master
   name: plib_i2c3_master.c
   physicalPath: peripheral/i2c/master
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 2074B0BAAAF9825B7EB8FD374E06CBE4
+  userChecksum: 0A9C13B3A369C2F976D788D204677E33
 - generatedChecksum: C95CE0ABB86E6B11CF77E8891D294510
   logicalPath: config/pic32mm_usb_curiosity/system/int
   name: sys_int.c
@@ -97,13 +97,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: DE51BB8F6FDBC39FB049CB2A14E56B25
-- generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
+- generatedChecksum: 71352EF41F6688AD8408E42970B50B66
   logicalPath: config/pic32mm_usb_curiosity/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 7806B30ECAE0D18D08CD583D8775530D
+  userChecksum: 71352EF41F6688AD8408E42970B50B66
 - generatedChecksum: null
   logicalPath: ''
   name: app.h
@@ -153,20 +153,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: CC7DFCC51CD25171A3E400E18969354F
-- generatedChecksum: 3C6689B8800C6234028EC2FBE82E25CF
+- generatedChecksum: B6AB8544AD4BE514E35118AEF97D6889
   logicalPath: config/pic32mm_usb_curiosity/driver/i2c
   name: drv_i2c.h
   physicalPath: driver/i2c
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3C6689B8800C6234028EC2FBE82E25CF
-- generatedChecksum: 260EF469FECCFEF9418D6268909EE2F8
+  userChecksum: B6AB8544AD4BE514E35118AEF97D6889
+- generatedChecksum: CF547E44C3B38B83586D3BAF44DAD439
   logicalPath: config/pic32mm_usb_curiosity/driver/i2c
   name: drv_i2c_definitions.h
   physicalPath: driver/i2c
   security: NON_SECURE
   type: HEADER
-  userChecksum: 260EF469FECCFEF9418D6268909EE2F8
+  userChecksum: CF547E44C3B38B83586D3BAF44DAD439
 - generatedChecksum: 4CF4A86296482D5331331BA301C20BB2
   logicalPath: config/pic32mm_usb_curiosity
   name: interrupts.h
@@ -216,13 +216,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: D0226D294D437AF5854104B8AD97C8CE
-- generatedChecksum: 231AB772A01446AB9BCC664483285459
+- generatedChecksum: 39C12E1D89BC214A6BB7051C4E1C4312
   logicalPath: config/pic32mm_usb_curiosity/peripheral/i2c/master
   name: plib_i2c3_master.h
   physicalPath: peripheral/i2c/master
   security: NON_SECURE
   type: HEADER
-  userChecksum: 231AB772A01446AB9BCC664483285459
+  userChecksum: 39C12E1D89BC214A6BB7051C4E1C4312
 - generatedChecksum: B963C6FE44292A1C4A14C3BA5BE95AEE
   logicalPath: config/pic32mm_usb_curiosity/peripheral/i2c/master
   name: plib_i2c_master_common.h
@@ -230,13 +230,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: B963C6FE44292A1C4A14C3BA5BE95AEE
-- generatedChecksum: 6972608768DDBE6E37A2D81B83DF490B
+- generatedChecksum: FADDA086C6C4E8FD7EBCE117438767A6
   logicalPath: config/pic32mm_usb_curiosity/system/debug
   name: sys_debug.h
   physicalPath: system/debug
   security: NON_SECURE
   type: HEADER
-  userChecksum: 6972608768DDBE6E37A2D81B83DF490B
+  userChecksum: FADDA086C6C4E8FD7EBCE117438767A6
 - generatedChecksum: 47330C2D8F204B2B69F8A86240A564B6
   logicalPath: config/pic32mm_usb_curiosity/system/int
   name: sys_int.h
@@ -272,13 +272,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 1C75A8A6B60598A2FD0D533F57839B72
-- generatedChecksum: 2C8543317B3F067432097AB9BD3E8672
+- generatedChecksum: 7DC91D6D376C98802C9C2990432DE9B7
   logicalPath: config/pic32mm_usb_curiosity
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2C8543317B3F067432097AB9BD3E8672
+  userChecksum: 7DC91D6D376C98802C9C2990432DE9B7
 - generatedChecksum: null
   logicalPath: config/pic32mm_usb_curiosity
   name: user.h
@@ -286,13 +286,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: C469F285BA2018DB29C8BEBCBE863C37
+- generatedChecksum: F4CEC9D0F29F2CB4DE8356E25430A58F
   logicalPath: config/pic32mm_usb_curiosity
   name: p32MM0256GPM064.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: C469F285BA2018DB29C8BEBCBE863C37
+  userChecksum: F4CEC9D0F29F2CB4DE8356E25430A58F
 format_version: v1.0
 libraries: []
 settings:
