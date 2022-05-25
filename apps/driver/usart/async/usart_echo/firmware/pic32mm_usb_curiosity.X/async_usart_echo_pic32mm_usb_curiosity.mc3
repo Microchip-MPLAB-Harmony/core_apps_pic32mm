@@ -1,4 +1,4 @@
-<config configName="pic32mm_usb_curiosity" projectName="async_usart_echo_pic32mm_usb_curiosity" configVersion="1.1" device="PIC32MM0256GPM064" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.2.4">
+<config configName="pic32mm_usb_curiosity" projectName="async_usart_echo_pic32mm_usb_curiosity" configVersion="1.1" device="PIC32MM0256GPM064" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.3">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -31,7 +31,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.1"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1870,7 +1870,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\driver\usart\drv_usart.h</file>
-         <hash>60d1ab81b5558b710e14241f92d60171c651716a2363c8a74f9e38e2bedd3656</hash>
+         <hash>38c9b2141416ac19cc67edf851ed6ab381d5c19c8878c8460df6a3190703dba7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\system\int\sys_int.h</file>
@@ -1890,7 +1890,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\toolchain_specifics.h</file>
-         <hash>c86ea57caade552aa8a4e7853594d481930697fdf3549b89ba0f07604894e0e8</hash>
+         <hash>9dfc75809b6eb23cee342231de51f6b382f8f7eabf8a939539cf44c0da32acbc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\osal\osal.h</file>
@@ -1902,15 +1902,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\peripheral\uart\plib_uart3.c</file>
-         <hash>b6d3bb0d71e25eb759b06f9a3731bc797b5c28261f6e1ac457d23c90f3c83ca7</hash>
+         <hash>6908b6de16c3dd8eb6a31fbe4ce2b95d4b9f6524d87098d91d19eff174d1cafe</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\p32MM0256GPM064.ld</file>
-         <hash>4bb176c2ad37ed7a9370c233ddcdcb6fe292a9686c1f8ee6f631e63eab346089</hash>
+         <hash>b08ab7a492ffa734426f71d5b358132c3863b6c3bfab706f0a7608259882bd6c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\peripheral\evic\plib_evic.c</file>
-         <hash>693cf71eaf872b891c57fd4b77aaa25b8c6c8a9b1c8b24080296b8cb8ccdb39d</hash>
+         <hash>217159aa180fb8801769b208f0121235287f83a41437cf93f3fc36caa69cc74e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\device.h</file>
@@ -1918,11 +1918,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\peripheral\uart\plib_uart3.h</file>
-         <hash>aaac6deb8f62f52f063a8bdff3713d09a374aa73c924a72270db774a5c5709fd</hash>
+         <hash>181d0df53dbe807c65421d787b985f89519698a5936497d6e4954b87f0357c19</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\stdio\xc32_monitor.c</file>
-         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\peripheral\evic\plib_evic.h</file>
@@ -1950,7 +1950,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\initialization.c</file>
-         <hash>8010664481d9788025d501a2d5939a9dacc2db1ede9f6785462c090efb94db35</hash>
+         <hash>cbf091cc1d1e85c0eb501865efc980006a1f4479186046fa410a072d2438eb4d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\driver\driver_common.h</file>
@@ -1966,7 +1966,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\system\debug\sys_debug.h</file>
-         <hash>970de73fb9806906b5429168c66ab403309d8a9cad46febab875a5e6d071525e</hash>
+         <hash>16fbc4bbf026e4713e9b835b1511411e053aaf92ab7d6a000638630576fe92b3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mm_usb_curiosity\system\int\sys_int_mapping.h</file>
