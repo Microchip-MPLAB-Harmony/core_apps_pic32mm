@@ -54,6 +54,7 @@
 // Section: Configuration Bits
 // ****************************************************************************
 // ****************************************************************************
+
 /*** FDEVOPT ***/
 #pragma config SOSCHP =      OFF
 #pragma config USERID =     0xffff
@@ -88,6 +89,7 @@
 
 /*** FSEC ***/
 #pragma config CP =         OFF
+
 
 
 
