@@ -83,6 +83,8 @@ size_t UART3_WriteFreeBufferCountGet(void);
 
 size_t UART3_WriteBufferSizeGet(void);
 
+bool UART3_TransmitComplete(void);
+
 bool UART3_WriteNotificationEnable(bool isEnabled, bool isPersistent);
 
 void UART3_WriteThresholdSet(uint32_t nBytesThreshold);
