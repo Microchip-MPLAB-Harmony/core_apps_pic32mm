@@ -39,9 +39,8 @@
 *******************************************************************************/
 #include <stddef.h>
 
-/* Declaration of these functions are missing in stdio.h for ARM parts*/
-/* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 21.2 deviated four times.  Deviation record ID -  H3_MISRAC_2012_R_21_2_DR_1 */
+extern int read(int handle, void *buffer, unsigned int len);
+extern int write(int handle, void * buffer, size_t count);
 
 
 int read(int handle, void *buffer, unsigned int len)
@@ -53,5 +52,3 @@ int write(int handle, void * buffer, size_t count)
 {
    return -1;
 }
-
-/* MISRAC 2012 deviation block end */
