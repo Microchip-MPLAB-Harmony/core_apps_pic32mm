@@ -61,12 +61,12 @@
 #include "peripheral/evic/plib_evic.h"
 #include "bsp/bsp.h"
 #include "driver/sdspi/drv_sdspi.h"
+#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "system/ports/sys_ports.h"
 #include "system/dma/sys_dma.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "system/time/sys_time.h"
 #include "app.h"
 
 
@@ -78,6 +78,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MM0256GPM064"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MM1387"
+#define DEVICE_SERIES		 "PIC32MM"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 24000000

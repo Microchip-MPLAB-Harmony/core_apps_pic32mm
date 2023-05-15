@@ -1,18 +1,21 @@
-/*******************************************************************************
- System Interrupts File
+/******************************************************************************
+  SD Card (SPI) Driver File System Interface Implementation
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    interrupt.h
+    drv_sdspi_file_system.h
 
   Summary:
-    Interrupt vectors mapping
+    SD Card (SPI) Driver Interface Definition
 
   Description:
-    This file contains declarations of device vectors used by Harmony 3
- *******************************************************************************/
+    The SD Card Driver provides a interface to access the SD Card. This file
+    implements the SD Card Driver file system interface.
+    This file should be included in the project if SD Card driver functionality
+    with File system is needed.
+*******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
@@ -38,29 +41,40 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *******************************************************************************/
 // DOM-IGNORE-END
-
-#ifndef INTERRUPTS_H
-#define INTERRUPTS_H
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Included Files
-// *****************************************************************************
-// *****************************************************************************
-#include <stdint.h>
-
-
+#ifndef DRV_SDSPI_FILE_SYSTEM_H
+#define DRV_SDSPI_FILE_SYSTEM_H
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Handler Routines
+// Section: Include Files
 // *****************************************************************************
 // *****************************************************************************
 
-void CORE_TIMER_InterruptHandler( void );
-void SPI3_TX_InterruptHandler( void );
-void SPI3_RX_InterruptHandler( void );
+#include "driver/sdspi/drv_sdspi.h"
+#include "system/fs/sys_fs_media_manager.h"
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+    extern "C" {
+#endif
+// DOM-IGNORE-END
+// *****************************************************************************
+// *****************************************************************************
+// Section: Global objects
+// *****************************************************************************
+// *****************************************************************************
 
 
+// *****************************************************************************
+// *****************************************************************************
+// Section: MEMORY Driver File system interface Routines
+// *****************************************************************************
+// *****************************************************************************
 
-#endif // INTERRUPTS_H
+void DRV_SDSPI_RegisterWithSysFs( const SYS_MODULE_INDEX drvIndex);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif //#ifndef DRV_SDSPI_FILE_SYSTEM_H
