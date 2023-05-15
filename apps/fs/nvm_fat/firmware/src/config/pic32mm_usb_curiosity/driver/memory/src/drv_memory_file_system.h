@@ -1,24 +1,23 @@
-/*******************************************************************************
- System Interrupts File
+/******************************************************************************
+  MEMORY Driver File System Interface Implementation
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    interrupt.c
+    drv_memory_file_system.h
 
   Summary:
-    Interrupt vectors mapping
+    MEMORY Driver Interface Definition
 
   Description:
-    This file maps all the interrupt vectors to their corresponding
-    implementations. If a particular module interrupt is used, then its ISR
-    definition can be found in corresponding PLIB source file. If a module
-    interrupt is not used, then its ISR implementation is mapped to dummy
-    handler.
- *******************************************************************************/
+    The MEMORY Driver provides a interface to access the MEMORY on the PIC32
+    microcontroller. This file implements the MEMORY Driver file system interface.
+    This file should be included in the project if MEMORY driver functionality with
+    File system is needed.
+*******************************************************************************/
 
-// DOM-IGNORE-BEGIN
+//DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -40,49 +39,43 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
- *******************************************************************************/
+*******************************************************************************/
+//DOM-IGNORE-END
+#ifndef DRV_MEMORY_FILE_SYSTEM_H
+#define DRV_MEMORY_FILE_SYSTEM_H
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Include Files
+// *****************************************************************************
+// *****************************************************************************
+
+#include "driver/memory/src/drv_memory_local.h"
+#include "system/fs/sys_fs_media_manager.h"
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+    extern "C" {
+#endif
 // DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Included Files
-// *****************************************************************************
-// *****************************************************************************
-#include "configuration.h"
-#include "interrupts.h"
-#include "definitions.h"
-
-
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: System Interrupt Vector Functions
+// Section: Global objects
 // *****************************************************************************
 // *****************************************************************************
 
 
-/* All the handlers are defined here.  Each will call its PLIB-specific function. */
 // *****************************************************************************
 // *****************************************************************************
-// Section: System Interrupt Vector declarations
+// Section: MEMORY Driver File system interface Routines
 // *****************************************************************************
 // *****************************************************************************
-void NVM_Handler (void);
 
+void DRV_MEMORY_RegisterWithSysFs( const SYS_MODULE_INDEX drvIndex, uint8_t mediaType);
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: System Interrupt Vector definitions
-// *****************************************************************************
-// *****************************************************************************
-void __ISR(_NVM_VECTOR, ipl1SOFT) NVM_Handler (void)
-{
-    NVM_InterruptHandler();
+#ifdef __cplusplus
 }
+#endif
 
-
-
-
-/*******************************************************************************
- End of File
-*/
+#endif //#ifndef DRV_MEMORY_FILE_SYSTEM_H
