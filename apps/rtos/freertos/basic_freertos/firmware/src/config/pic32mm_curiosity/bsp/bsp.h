@@ -40,8 +40,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _BSP_H
-#define _BSP_H
+#ifndef BSP_H
+#define BSP_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -60,16 +60,19 @@
 // Section: BSP Macros
 // *****************************************************************************
 // *****************************************************************************
+#define pic32mm_curiosity
+#define BSP_NAME             "pic32mm_curiosity"
+
 /*** LED Macros for LED2 ***/
-#define LED2_Toggle() (LATCINV = (1<<9))
+#define LED2_Toggle() (LATCINV = (1UL<<9))
 #define LED2_Get() ((PORTC >> 9) & 0x1)
-#define LED2_On() (LATCSET = (1<<9))
-#define LED2_Off() (LATCCLR = (1<<9))
+#define LED2_On() (LATCSET = (1UL<<9))
+#define LED2_Off() (LATCCLR = (1UL<<9))
 /*** LED Macros for LED1 ***/
-#define LED1_Toggle() (LATAINV = (1<<0))
+#define LED1_Toggle() (LATAINV = (1UL<<0))
 #define LED1_Get() ((PORTA >> 0) & 0x1)
-#define LED1_On() (LATASET = (1<<0))
-#define LED1_Off() (LATACLR = (1<<0))
+#define LED1_On() (LATASET = (1UL<<0))
+#define LED1_Off() (LATACLR = (1UL<<0))
 /*** SWITCH Macros for SWITCH2 ***/
 #define SWITCH2_Get() ((PORTB >> 13) & 0x1)
 #define SWITCH2_STATE_PRESSED 0
@@ -107,7 +110,6 @@
 
   Example:
     <code>
-    //Initialize the BSP
     BSP_Initialize();
     </code>
 
@@ -117,7 +119,7 @@
 
 void BSP_Initialize(void);
 
-#endif // _BSP_H
+#endif // BSP_H
 
 /*******************************************************************************
  End of File
