@@ -50,15 +50,17 @@
 
 #include "device.h"
 #include "plib_i2c3_master.h"
+#include "interrupts.h"
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global Data
 // *****************************************************************************
 // *****************************************************************************
+#define NOP asm(" NOP")
 
 
-static I2C_OBJ i2c3Obj;
+volatile static I2C_OBJ i2c3Obj;
 
 void I2C3_Initialize(void)
 {
@@ -90,6 +92,7 @@ void I2C3_Initialize(void)
 /* I2C state machine */
 static void I2C3_TransferSM(void)
 {
+    uint8_t tempVar = 0;
     IFS2CLR = _IFS2_I2C3MIF_MASK;
 
     switch (i2c3Obj.state)
@@ -104,19 +107,22 @@ static void I2C3_TransferSM(void)
 
         case I2C_STATE_ADDR_BYTE_1_SEND:
             /* Is transmit buffer full? */
-            if (!(I2C3STAT & _I2C3STAT_TBF_MASK))
+            if ((I2C3STAT & _I2C3STAT_TBF_MASK) == 0U)
             {
-                if (i2c3Obj.address > 0x007F)
+                if (i2c3Obj.address > 0x007FU)
                 {
+                    tempVar = (((volatile uint8_t*)&i2c3Obj.address)[1] << 1);
                     /* Transmit the MSB 2 bits of the 10-bit slave address, with R/W = 0 */
-                    I2C3TRN = ( 0xF0 | (((uint8_t*)&i2c3Obj.address)[1] << 1));
+                    I2C3TRN = (uint32_t)( 0xF0U | (uint32_t)tempVar);
 
                     i2c3Obj.state = I2C_STATE_ADDR_BYTE_2_SEND;
                 }
                 else
                 {
                     /* 8-bit addressing mode */
-                    I2C3TRN = ((i2c3Obj.address << 1) | i2c3Obj.transferType);
+                    I2C_TRANSFER_TYPE transferType = i2c3Obj.transferType;
+
+                    I2C3TRN = (((uint32_t)i2c3Obj.address << 1) | transferType);
 
                     if (i2c3Obj.transferType == I2C_TRANSFER_TYPE_WRITE)
                     {
@@ -132,9 +138,9 @@ static void I2C3_TransferSM(void)
 
         case I2C_STATE_ADDR_BYTE_2_SEND:
             /* Transmit the 2nd byte of the 10-bit slave address */
-            if (!(I2C3STAT & _I2C3STAT_ACKSTAT_MASK))
+            if ((I2C3STAT & _I2C3STAT_ACKSTAT_MASK) == 0U)
             {
-                if (!(I2C3STAT & _I2C3STAT_TBF_MASK))
+                if ((I2C3STAT & _I2C3STAT_TBF_MASK) == 0U)
                 {
                     /* Transmit the remaining 8-bits of the 10-bit address */
                     I2C3TRN = i2c3Obj.address;
@@ -159,7 +165,7 @@ static void I2C3_TransferSM(void)
             break;
 
         case I2C_STATE_READ_10BIT_MODE:
-            if (!(I2C3STAT & _I2C3STAT_ACKSTAT_MASK))
+            if ((I2C3STAT & _I2C3STAT_ACKSTAT_MASK) == 0U)
             {
                 /* Generate repeated start condition */
                 I2C3CONSET = _I2C3CON_RSEN_MASK;
@@ -176,10 +182,11 @@ static void I2C3_TransferSM(void)
 
         case I2C_STATE_ADDR_BYTE_1_SEND_10BIT_ONLY:
             /* Is transmit buffer full? */
-            if (!(I2C3STAT & _I2C3STAT_TBF_MASK))
+            if ((I2C3STAT & _I2C3STAT_TBF_MASK) == 0U)
             {
+                tempVar = (((volatile uint8_t*)&i2c3Obj.address)[1] << 1);
                 /* Transmit the first byte of the 10-bit slave address, with R/W = 1 */
-                I2C3TRN = ( 0xF1 | ((((uint8_t*)&i2c3Obj.address)[1] << 1)));
+                I2C3TRN = (uint32_t)( 0xF1U | (uint32_t)tempVar);
                 i2c3Obj.state = I2C_STATE_READ;
             }
             else
@@ -192,27 +199,32 @@ static void I2C3_TransferSM(void)
             break;
 
         case I2C_STATE_WRITE:
-            if (!(I2C3STAT & _I2C3STAT_ACKSTAT_MASK))
+            if ((I2C3STAT & _I2C3STAT_ACKSTAT_MASK) == 0U)
             {
+                size_t writeCount = i2c3Obj.writeCount;
+
                 /* ACK received */
-                if (i2c3Obj.writeCount < i2c3Obj.writeSize)
+                if (writeCount < i2c3Obj.writeSize)
                 {
-                    if (!(I2C3STAT & _I2C3STAT_TBF_MASK))
+                    if ((I2C3STAT & _I2C3STAT_TBF_MASK) == 0U)
                     {
                         /* Transmit the data from writeBuffer[] */
-                        I2C3TRN = i2c3Obj.writeBuffer[i2c3Obj.writeCount++];
+                        I2C3TRN = i2c3Obj.writeBuffer[writeCount];
+                        i2c3Obj.writeCount++;
                     }
                 }
                 else
                 {
-                    if (i2c3Obj.readCount < i2c3Obj.readSize)
+                    size_t readSize = i2c3Obj.readSize;
+
+                    if (i2c3Obj.readCount < readSize)
                     {
                         /* Generate repeated start condition */
                         I2C3CONSET = _I2C3CON_RSEN_MASK;
 
                         i2c3Obj.transferType = I2C_TRANSFER_TYPE_READ;
 
-                        if (i2c3Obj.address > 0x007F)
+                        if (i2c3Obj.address > 0x007FU)
                         {
                             /* Send the I2C slave address with R/W = 1 */
                             i2c3Obj.state = I2C_STATE_ADDR_BYTE_1_SEND_10BIT_ONLY;
@@ -242,7 +254,7 @@ static void I2C3_TransferSM(void)
             break;
 
         case I2C_STATE_READ:
-            if (!(I2C3STAT & _I2C3STAT_ACKSTAT_MASK))
+            if ((I2C3STAT & _I2C3STAT_ACKSTAT_MASK) == 0U)
             {
                 /* Slave ACK'd the device address. Enable receiver. */
                 I2C3CONSET = _I2C3CON_RCEN_MASK;
@@ -259,10 +271,13 @@ static void I2C3_TransferSM(void)
 
         case I2C_STATE_READ_BYTE:
             /* Data received from the slave */
-            if (I2C3STAT & _I2C3STAT_RBF_MASK)
+            if ((I2C3STAT & _I2C3STAT_RBF_MASK) != 0U)
             {
-                i2c3Obj.readBuffer[i2c3Obj.readCount++] = I2C3RCV;
-                if (i2c3Obj.readCount == i2c3Obj.readSize)
+                size_t readCount = i2c3Obj.readCount;
+
+                i2c3Obj.readBuffer[readCount] = (uint8_t)I2C3RCV;
+                readCount++;
+                if (readCount == i2c3Obj.readSize)
                 {
                     /* Send NAK */
                     I2C3CONSET = _I2C3CON_ACKDT_MASK;
@@ -274,23 +289,27 @@ static void I2C3_TransferSM(void)
                     I2C3CONCLR = _I2C3CON_ACKDT_MASK;
                     I2C3CONSET = _I2C3CON_ACKEN_MASK;
                 }
+                i2c3Obj.readCount = readCount;
                 i2c3Obj.state = I2C_STATE_WAIT_ACK_COMPLETE;
             }
             break;
 
         case I2C_STATE_WAIT_ACK_COMPLETE:
-            /* ACK or NAK sent to the I2C slave */
-            if (i2c3Obj.readCount < i2c3Obj.readSize)
             {
-                /* Enable receiver */
-                I2C3CONSET = _I2C3CON_RCEN_MASK;
-                i2c3Obj.state = I2C_STATE_READ_BYTE;
-            }
-            else
-            {
-                /* Generate Stop Condition */
-                I2C3CONSET = _I2C3CON_PEN_MASK;
-                i2c3Obj.state = I2C_STATE_WAIT_STOP_CONDITION_COMPLETE;
+                size_t readSize = i2c3Obj.readSize;
+                /* ACK or NAK sent to the I2C slave */
+                if (i2c3Obj.readCount < readSize)
+                {
+                    /* Enable receiver */
+                    I2C3CONSET = _I2C3CON_RCEN_MASK;
+                    i2c3Obj.state = I2C_STATE_READ_BYTE;
+                }
+                else
+                {
+                    /* Generate Stop Condition */
+                    I2C3CONSET = _I2C3CON_PEN_MASK;
+                    i2c3Obj.state = I2C_STATE_WAIT_STOP_CONDITION_COMPLETE;
+                }
             }
             break;
 
@@ -300,11 +319,14 @@ static void I2C3_TransferSM(void)
             IEC2CLR = _IEC2_I2C3BCIE_MASK;
             if (i2c3Obj.callback != NULL)
             {
-                i2c3Obj.callback(i2c3Obj.context);
+                uintptr_t context = i2c3Obj.context;
+
+                i2c3Obj.callback(context);
             }
             break;
 
         default:
+                   /*Do Nothing*/
             break;
     }
 }
@@ -312,106 +334,106 @@ static void I2C3_TransferSM(void)
 
 void I2C3_CallbackRegister(I2C_CALLBACK callback, uintptr_t contextHandle)
 {
-    if (callback == NULL)
+    if (callback != NULL)
     {
-        return;
+       i2c3Obj.callback = callback;
+       i2c3Obj.context = contextHandle;
     }
-
-    i2c3Obj.callback = callback;
-    i2c3Obj.context = contextHandle;
+    return;
 }
 
 bool I2C3_IsBusy(void)
 {
-    if( (i2c3Obj.state != I2C_STATE_IDLE ) || (I2C3CON & 0x0000001F) ||
-        (I2C3STAT & _I2C3STAT_TRSTAT_MASK) || (I2C3STAT & _I2C3STAT_S_MASK) )
+    bool busycheck = false;
+    uint32_t tempVar = I2C3CON;
+    uint32_t tempVar1 = I2C3STAT;
+    if( (i2c3Obj.state != I2C_STATE_IDLE ) || ((tempVar & 0x0000001FU) != 0U) ||
+        ((tempVar1 & _I2C3STAT_TRSTAT_MASK) != 0U) || ((tempVar1 & _I2C3STAT_S_MASK) != 0U) )
     {
-        return true;
+        busycheck = true;
     }
-    else
-    {
-        return false;
-    }
+    return busycheck;
 }
 
 bool I2C3_Read(uint16_t address, uint8_t* rdata, size_t rlength)
 {
+    bool statusRead = false;
+    uint32_t tempVar = I2C3STAT;
     /* State machine must be idle and I2C module should not have detected a start bit on the bus */
-    if((i2c3Obj.state != I2C_STATE_IDLE) || (I2C3STAT & _I2C3STAT_S_MASK))
+    if((i2c3Obj.state == I2C_STATE_IDLE) && (( tempVar & _I2C3STAT_S_MASK) == 0U))
     {
-        return false;
+        i2c3Obj.address             = address;
+        i2c3Obj.readBuffer          = rdata;
+        i2c3Obj.readSize            = rlength;
+        i2c3Obj.writeBuffer         = NULL;
+        i2c3Obj.writeSize           = 0;
+        i2c3Obj.writeCount          = 0;
+        i2c3Obj.readCount           = 0;
+        i2c3Obj.transferType        = I2C_TRANSFER_TYPE_READ;
+        i2c3Obj.error               = I2C_ERROR_NONE;
+        i2c3Obj.state               = I2C_STATE_ADDR_BYTE_1_SEND;
+
+        I2C3CONSET                  = _I2C3CON_SEN_MASK;
+        IEC2SET                     = _IEC2_I2C3MIE_MASK;
+        IEC2SET                     = _IEC2_I2C3BCIE_MASK;
+        statusRead = true;
     }
-
-    i2c3Obj.address             = address;
-    i2c3Obj.readBuffer          = rdata;
-    i2c3Obj.readSize            = rlength;
-    i2c3Obj.writeBuffer         = NULL;
-    i2c3Obj.writeSize           = 0;
-    i2c3Obj.writeCount          = 0;
-    i2c3Obj.readCount           = 0;
-    i2c3Obj.transferType        = I2C_TRANSFER_TYPE_READ;
-    i2c3Obj.error               = I2C_ERROR_NONE;
-    i2c3Obj.state               = I2C_STATE_ADDR_BYTE_1_SEND;
-
-    I2C3CONSET                  = _I2C3CON_SEN_MASK;
-    IEC2SET                     = _IEC2_I2C3MIE_MASK;
-    IEC2SET                     = _IEC2_I2C3BCIE_MASK;
-
-    return true;
+    return statusRead;
 }
 
 
 bool I2C3_Write(uint16_t address, uint8_t* wdata, size_t wlength)
 {
+    bool statusWrite = false;
+    uint32_t tempVar = I2C3STAT;
     /* State machine must be idle and I2C module should not have detected a start bit on the bus */
-    if((i2c3Obj.state != I2C_STATE_IDLE) || (I2C3STAT & _I2C3STAT_S_MASK))
+    if((i2c3Obj.state == I2C_STATE_IDLE) && (( tempVar & _I2C3STAT_S_MASK) == 0U))
     {
-        return false;
+        i2c3Obj.address             = address;
+        i2c3Obj.readBuffer          = NULL;
+        i2c3Obj.readSize            = 0;
+        i2c3Obj.writeBuffer         = wdata;
+        i2c3Obj.writeSize           = wlength;
+        i2c3Obj.writeCount          = 0;
+        i2c3Obj.readCount           = 0;
+        i2c3Obj.transferType        = I2C_TRANSFER_TYPE_WRITE;
+        i2c3Obj.error               = I2C_ERROR_NONE;
+        i2c3Obj.state               = I2C_STATE_ADDR_BYTE_1_SEND;
+
+        I2C3CONSET                  = _I2C3CON_SEN_MASK;
+        IEC2SET                     = _IEC2_I2C3MIE_MASK;
+        IEC2SET                     = _IEC2_I2C3BCIE_MASK;
+        statusWrite = true;
     }
-
-    i2c3Obj.address             = address;
-    i2c3Obj.readBuffer          = NULL;
-    i2c3Obj.readSize            = 0;
-    i2c3Obj.writeBuffer         = wdata;
-    i2c3Obj.writeSize           = wlength;
-    i2c3Obj.writeCount          = 0;
-    i2c3Obj.readCount           = 0;
-    i2c3Obj.transferType        = I2C_TRANSFER_TYPE_WRITE;
-    i2c3Obj.error               = I2C_ERROR_NONE;
-    i2c3Obj.state               = I2C_STATE_ADDR_BYTE_1_SEND;
-
-    I2C3CONSET                  = _I2C3CON_SEN_MASK;
-    IEC2SET                     = _IEC2_I2C3MIE_MASK;
-    IEC2SET                     = _IEC2_I2C3BCIE_MASK;
-
-    return true;
+    return statusWrite;
 }
 
 
 bool I2C3_WriteRead(uint16_t address, uint8_t* wdata, size_t wlength, uint8_t* rdata, size_t rlength)
 {
+    bool statusWriteread = false;
+    uint32_t tempVar = I2C3STAT;
     /* State machine must be idle and I2C module should not have detected a start bit on the bus */
-    if((i2c3Obj.state != I2C_STATE_IDLE) || (I2C3STAT & _I2C3STAT_S_MASK))
+    if((i2c3Obj.state == I2C_STATE_IDLE) &&
+       ((tempVar & _I2C3STAT_S_MASK) == 0U))
     {
-        return false;
+        i2c3Obj.address             = address;
+        i2c3Obj.readBuffer          = rdata;
+        i2c3Obj.readSize            = rlength;
+        i2c3Obj.writeBuffer         = wdata;
+        i2c3Obj.writeSize           = wlength;
+        i2c3Obj.writeCount          = 0;
+        i2c3Obj.readCount           = 0;
+        i2c3Obj.transferType        = I2C_TRANSFER_TYPE_WRITE;
+        i2c3Obj.error               = I2C_ERROR_NONE;
+        i2c3Obj.state               = I2C_STATE_ADDR_BYTE_1_SEND;
+
+        I2C3CONSET                  = _I2C3CON_SEN_MASK;
+        IEC2SET                     = _IEC2_I2C3MIE_MASK;
+        IEC2SET                     = _IEC2_I2C3BCIE_MASK;
+        statusWriteread = true;
     }
-
-    i2c3Obj.address             = address;
-    i2c3Obj.readBuffer          = rdata;
-    i2c3Obj.readSize            = rlength;
-    i2c3Obj.writeBuffer         = wdata;
-    i2c3Obj.writeSize           = wlength;
-    i2c3Obj.writeCount          = 0;
-    i2c3Obj.readCount           = 0;
-    i2c3Obj.transferType        = I2C_TRANSFER_TYPE_WRITE;
-    i2c3Obj.error               = I2C_ERROR_NONE;
-    i2c3Obj.state               = I2C_STATE_ADDR_BYTE_1_SEND;
-
-    I2C3CONSET                  = _I2C3CON_SEN_MASK;
-    IEC2SET                     = _IEC2_I2C3MIE_MASK;
-    IEC2SET                     = _IEC2_I2C3BCIE_MASK;
-
-    return true;
+    return statusWriteread;
 }
 
 I2C_ERROR I2C3_ErrorGet(void)
@@ -428,6 +450,7 @@ bool I2C3_TransferSetup(I2C_TRANSFER_SETUP* setup, uint32_t srcClkFreq )
 {
     uint32_t baudValue;
     uint32_t i2cClkSpeed;
+    float fBaudValue;
 
     if (setup == NULL)
     {
@@ -437,20 +460,21 @@ bool I2C3_TransferSetup(I2C_TRANSFER_SETUP* setup, uint32_t srcClkFreq )
     i2cClkSpeed = setup->clkSpeed;
 
     /* Maximum I2C clock speed cannot be greater than 1 MHz */
-    if (i2cClkSpeed > 1000000)
+    if (i2cClkSpeed > 1000000U)
     {
         return false;
     }
 
-    if( srcClkFreq == 0)
+    if( srcClkFreq == 0U)
     {
         srcClkFreq = 24000000UL;
     }
 
-    baudValue = ((float)((float)srcClkFreq/2.0) * (1/(float)i2cClkSpeed - 0.000000130)) - 1;
+    fBaudValue = (((float)srcClkFreq / 2.0f) * ((1.0f / (float)i2cClkSpeed) - 0.000000130f)) - 1.0f;
+    baudValue = (uint32_t)fBaudValue;
 
     /* I2CxBRG value cannot be from 0 to 3 or more than the size of the baud rate register */
-    if ((baudValue < 4) || (baudValue > 65535))
+    if ((baudValue < 4U) || (baudValue > 65535U))
     {
         return false;
     }
@@ -459,7 +483,7 @@ bool I2C3_TransferSetup(I2C_TRANSFER_SETUP* setup, uint32_t srcClkFreq )
 
     /* Enable slew rate for 400 kHz clock speed; disable for all other speeds */
 
-    if (i2cClkSpeed == 400000)
+    if (i2cClkSpeed == 400000U)
     {
         I2C3CONCLR = _I2C3CON_DISSLW_MASK;;
     }
@@ -482,11 +506,11 @@ void I2C3_TransferAbort( void )
 
     // Disable and Enable I2C Master
     I2C3CONCLR = _I2C3CON_ON_MASK;
-    asm("nop");asm("nop");
+    NOP;NOP;
     I2C3CONSET = _I2C3CON_ON_MASK;
 }
 
-void I2C3_BUS_InterruptHandler(void)
+void __attribute__((used)) I2C3_BUS_InterruptHandler(void)
 {
     /* Clear the bus collision error status bit */
     I2C3STATCLR = _I2C3STAT_BCL_MASK;
@@ -500,11 +524,13 @@ void I2C3_BUS_InterruptHandler(void)
 
     if (i2c3Obj.callback != NULL)
     {
-        i2c3Obj.callback(i2c3Obj.context);
+        uintptr_t context = i2c3Obj.context;
+
+        i2c3Obj.callback(context);
     }
 }
 
-void I2C3_MASTER_InterruptHandler(void)
+void __attribute__((used)) I2C3_MASTER_InterruptHandler(void)
 {
     I2C3_TransferSM();
 }
