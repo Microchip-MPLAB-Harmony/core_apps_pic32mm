@@ -29,6 +29,7 @@
           <itemPath>../src/config/pic32mm_usb_curiosity/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/pic32mm_usb_curiosity/user.h</itemPath>
           <itemPath>../src/config/pic32mm_usb_curiosity/configuration.h</itemPath>
+          <itemPath>../src/config/pic32mm_usb_curiosity/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="FreeRTOS" projectFiles="true">
@@ -67,17 +68,6 @@
       <itemPath>../src/task4.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
-      <logicalFolder name="f1" displayName="pic32mm_usb_curiosity.mhc" projectFiles="true">
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/BSP_PIC32MM_USB_Curiosity.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/core.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/dfp.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/FreeRTOS.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/HarmonyCore.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/project.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/pic32mm_usb_curiosity/pic32mm_usb_curiosity.mhc/uart3.yml</itemPath>
-      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mm_usb_curiosity/harmony-manifest-success.yml</itemPath>
       <itemPath>basic_freertos_pic32mm_usb_curiosity.mc3</itemPath>
