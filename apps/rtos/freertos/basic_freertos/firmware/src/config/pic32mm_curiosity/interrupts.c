@@ -79,23 +79,23 @@ void UART2_ERR_Handler (void);
 // *****************************************************************************
 // *****************************************************************************
 
-void CHANGE_NOTICE_B_Handler (void)
+void __attribute__((used)) CHANGE_NOTICE_B_Handler (void)
 {
     CHANGE_NOTICE_B_InterruptHandler();
 }
 
 
-void UART2_RX_Handler (void)
+void __attribute__((used)) UART2_RX_Handler (void)
 {
     UART2_RX_InterruptHandler();
 }
 
-void UART2_TX_Handler (void)
+void __attribute__((used)) UART2_TX_Handler (void)
 {
     UART2_TX_InterruptHandler();
 }
 
-void UART2_ERR_Handler (void)
+void __attribute__((used)) UART2_ERR_Handler (void)
 {
     UART2_ERR_InterruptHandler();
 }
