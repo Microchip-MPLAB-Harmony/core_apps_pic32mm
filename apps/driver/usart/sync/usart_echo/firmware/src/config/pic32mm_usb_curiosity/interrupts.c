@@ -79,17 +79,17 @@ void UART3_ERR_Handler (void);
 // *****************************************************************************
 
 
-void UART3_RX_Handler (void)
+void __attribute__((used)) UART3_RX_Handler (void)
 {
     UART3_RX_InterruptHandler();
 }
 
-void UART3_TX_Handler (void)
+void __attribute__((used)) UART3_TX_Handler (void)
 {
     UART3_TX_InterruptHandler();
 }
 
-void UART3_ERR_Handler (void)
+void __attribute__((used)) UART3_ERR_Handler (void)
 {
     UART3_ERR_InterruptHandler();
 }
