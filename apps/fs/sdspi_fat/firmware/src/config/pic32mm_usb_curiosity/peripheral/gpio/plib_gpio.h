@@ -69,6 +69,7 @@
 #define GPIO_RC11_OutputEnable()      (TRISCCLR = (1<<11))
 #define GPIO_RC11_InputEnable()       (TRISCSET = (1<<11))
 #define GPIO_RC11_Get()               ((PORTC >> 11) & 0x1)
+#define GPIO_RC11_GetLatch()          ((LATC >> 11) & 0x1)
 #define GPIO_RC11_PIN                  GPIO_PIN_RC11
 
 
