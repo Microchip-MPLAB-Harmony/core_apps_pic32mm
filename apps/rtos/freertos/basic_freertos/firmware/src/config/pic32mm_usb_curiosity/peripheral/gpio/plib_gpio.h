@@ -69,6 +69,7 @@
 #define SWITCH1_OutputEnable()      (TRISBCLR = (1<<9))
 #define SWITCH1_InputEnable()       (TRISBSET = (1<<9))
 #define SWITCH1_Get()               ((PORTB >> 9) & 0x1)
+#define SWITCH1_GetLatch()          ((LATB >> 9) & 0x1)
 #define SWITCH1_PIN                  GPIO_PIN_RB9
 #define SWITCH1_InterruptEnable()   (CNEN0BSET = (1<<9))
 #define SWITCH1_InterruptDisable()  (CNEN0BCLR = (1<<9))
