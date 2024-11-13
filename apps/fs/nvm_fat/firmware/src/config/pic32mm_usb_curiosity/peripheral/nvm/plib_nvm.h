@@ -67,7 +67,7 @@
 #define NVM_FLASH_ROWSIZE          (256U)
 #define NVM_FLASH_PAGESIZE         (2048U)
 
-#define NVM_START_ADDRESS              0x9d020000
+#define NVM_START_ADDRESS              0x9d020000U
 #define NVM_MEDIA_SIZE                 128
 #define NVM_ERASE_BUFFER_SIZE          2048
 
