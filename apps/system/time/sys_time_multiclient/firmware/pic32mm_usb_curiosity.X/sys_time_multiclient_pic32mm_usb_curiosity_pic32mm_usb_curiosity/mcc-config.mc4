@@ -1,0 +1,102 @@
+configVersion: 1.0.0
+coreVersion: 5.8.2
+device: PIC32MM0256GPM064
+deviceLibrary:
+  className: com.microchip.mcc.harmony.Harmony3Library
+groupModules: []
+modules:
+- BSP_PIC32MM_USB_Curiosity
+- HarmonyCore
+- core
+- core_timer
+- dfp
+- stdio
+- sys_time
+- uart3
+generatedFileHashHistoryMap:
+- file: ..\src\app.c
+  hash: 632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620
+- file: ..\src\app.h
+  hash: 8e35d8509552a4d1d6e6f123ad75694cf784a707f7dac592ed33b55121aa8e28
+- file: ..\src\config\pic32mm_usb_curiosity\bsp\bsp.c
+  hash: 59a4074d9c0fd341f914c70a1685f71873d66fb46781c4d17d22d2f6a2e5600d
+- file: ..\src\config\pic32mm_usb_curiosity\bsp\bsp.h
+  hash: 0b881111b9e4401d10a2bf759540f9d3ecaa0a7aa03c226fe15a88b1f8d99b82
+- file: ..\src\config\pic32mm_usb_curiosity\configuration.h
+  hash: 7ed2f1927450bb3679603b8fcab2a17fb65a7ca14e5e104e8a7532b6f5f818cf
+- file: ..\src\config\pic32mm_usb_curiosity\definitions.h
+  hash: 0f98ca36503a08e7a728137ae4fe2a9e87b8c604b8b2640ade0bab0e826f7f0f
+- file: ..\src\config\pic32mm_usb_curiosity\device.h
+  hash: 4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442
+- file: ..\src\config\pic32mm_usb_curiosity\exceptions.c
+  hash: ed8f326d4f1abc2e74c1743119304a2f613522e3baacdd8df59fdda14c44619e
+- file: ..\src\config\pic32mm_usb_curiosity\initialization.c
+  hash: 9a104d2b7735036fee5d3ea178adf6085ea2d4f88bf45e64bcb0fde162d9494a
+- file: ..\src\config\pic32mm_usb_curiosity\interrupts.c
+  hash: 5d543d8f5ac3f7f7cbb7e8faeb0d648e95ab162acae140d270bc642ffcfb2a4a
+- file: ..\src\config\pic32mm_usb_curiosity\interrupts.h
+  hash: 80825fbf90806a4a2720478935c4d8fb1ae134dc3180c24943975f59be484f04
+- file: ..\src\config\pic32mm_usb_curiosity\osal\osal.h
+  hash: 1cfe3b61d9693b2369922041eef33fe16b3c1ccd9c85d4ded808b805f90a869c
+- file: ..\src\config\pic32mm_usb_curiosity\osal\osal_definitions.h
+  hash: 5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37
+- file: ..\src\config\pic32mm_usb_curiosity\osal\osal_impl_basic.h
+  hash: 65e68edbc0320d0407399f65e6d06ff7e6d3d7697231cf1fe0a1fdf1d65f0463
+- file: ..\src\config\pic32mm_usb_curiosity\p32MM0256GPM064.ld
+  hash: 27f0c4872ab85faac358a7bb25b5e95f5515314aaee8a83042a5b48bffeceb4a
+- file: ..\src\config\pic32mm_usb_curiosity\peripheral\clk\plib_clk.c
+  hash: e82bbc3a12b4abb110419274385fece4375da4c61b02ce610f3ee7956d12992c
+- file: ..\src\config\pic32mm_usb_curiosity\peripheral\clk\plib_clk.h
+  hash: 35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255
+- file: ..\src\config\pic32mm_usb_curiosity\peripheral\coretimer\plib_coretimer.c
+  hash: d2e0839da9beba86ea927aad046330882835e6d1177f6f327eba3e7ecc7e66ff
+- file: ..\src\config\pic32mm_usb_curiosity\peripheral\coretimer\plib_coretimer.h
+  hash: 3c04c1af7454b0b5a7336e5daba5d6890aced3df44051ecc11d7ed0b2168e555
+- file: ..\src\config\pic32mm_usb_curiosity\peripheral\evic\plib_evic.c
+  hash: 337bfb10adccc72e4112e9e04b1a7afeb5bb2be30d4454d2e9442062ce7b049b
+- file: ..\src\config\pic32mm_usb_curiosity\peripheral\evic\plib_evic.h
+  hash: 51ee35d6c1a13447fe5d8b63cd7a0e8b8ef10c991bb8ff47490daf855f55fcf1
+- file: ..\src\config\pic32mm_usb_curiosity\peripheral\gpio\plib_gpio.c
+  hash: 976c32f3b9506ad99450e617cfd082d204134aeb8d31da3b8a6c67a30293f430
+- file: ..\src\config\pic32mm_usb_curiosity\peripheral\gpio\plib_gpio.h
+  hash: ef55b889aedfc59e020698ff0b992e12f48798c81356604315694995dfbf2657
+- file: ..\src\config\pic32mm_usb_curiosity\peripheral\uart\plib_uart3.c
+  hash: 88f4084fb9a82408748880163dbce53d716a6285fa2013158e503d2f57df48de
+- file: ..\src\config\pic32mm_usb_curiosity\peripheral\uart\plib_uart3.h
+  hash: d09ad47fe13bfc6cc0be727c0d0622322126cba7a6b9442d2a786e03ab327faf
+- file: ..\src\config\pic32mm_usb_curiosity\peripheral\uart\plib_uart_common.h
+  hash: 70213cd740b3ff9a591d93ad6aac9493335851db084dd862275effacdebf710d
+- file: ..\src\config\pic32mm_usb_curiosity\stdio\xc32_monitor.c
+  hash: 3a324a9f25cb6591130f8103d7d936ca701680d174fd9dcd48b214ac10cd81b3
+- file: ..\src\config\pic32mm_usb_curiosity\sys_tasks.h
+  hash: 21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56
+- file: ..\src\config\pic32mm_usb_curiosity\system\debug\sys_debug.h
+  hash: aa94da8f32cbcb40672145542d149d077ff8f4b25c08d47d53e3d206d1c6bb83
+- file: ..\src\config\pic32mm_usb_curiosity\system\int\src\sys_int.c
+  hash: 30ac5e334ca90204f545f1ab769ae26f421b910b3fb3be99354b364febceee64
+- file: ..\src\config\pic32mm_usb_curiosity\system\int\sys_int.h
+  hash: 2c878ab7ff41ae56b5c0c3c94929ad66eb87b8660bf9a439177d049e8ad8f8c8
+- file: ..\src\config\pic32mm_usb_curiosity\system\int\sys_int_mapping.h
+  hash: a2dcf05575becc98aa212af1d220eda07487bd645d82c4d7a980aa3a22384cf3
+- file: ..\src\config\pic32mm_usb_curiosity\system\system.h
+  hash: 2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55
+- file: ..\src\config\pic32mm_usb_curiosity\system\system_common.h
+  hash: c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984
+- file: ..\src\config\pic32mm_usb_curiosity\system\system_module.h
+  hash: 96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9
+- file: ..\src\config\pic32mm_usb_curiosity\system\time\src\sys_time.c
+  hash: fa2d85ab967b80157caf8483f6e28a23b12b548844a1d80f2fef760cd9b99271
+- file: ..\src\config\pic32mm_usb_curiosity\system\time\src\sys_time_local.h
+  hash: df56f970664902417d798760e44978cf4b84c108cf0761647a383e91db76980c
+- file: ..\src\config\pic32mm_usb_curiosity\system\time\sys_time.h
+  hash: 6357468f7670698b16bfb6439d9919ed38eba99d4f03277a8b43ac34586fa1b3
+- file: ..\src\config\pic32mm_usb_curiosity\system\time\sys_time_definitions.h
+  hash: 46537746b1d12ece6b682c9be1c8f3f219663c638c21a51a973762b7b393afe6
+- file: ..\src\config\pic32mm_usb_curiosity\tasks.c
+  hash: 36364a39e784157f4aac281dfecc1f19be971c9935e6299a6f37a78cd98d1d46
+- file: ..\src\config\pic32mm_usb_curiosity\toolchain_specifics.h
+  hash: b4de6e02e3e48c62f7ba233405ffdf6ef31bb971d1a7b49efa1676f45cabc1ac
+- file: ..\src\config\pic32mm_usb_curiosity\user.h
+  hash: 451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995
+- file: ..\src\main.c
+  hash: d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5
