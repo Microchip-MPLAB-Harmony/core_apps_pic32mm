@@ -117,7 +117,6 @@
         <itemPath>usart_echo_sync_pic32mm_usb_curiosity_pic32mm_usb_curiosity/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mm_usb_curiosity/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -294,7 +293,7 @@
         <property key="extra-include-directories-for-assembler"
                   value="../src/config/pic32mm_usb_curiosity;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MM_GPM"/>
         <property key="extra-include-directories-for-preprocessor"
-                  value="../src/config/pic32mm_usb_curiosity;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MM_GPM"/>
+                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MM_GPM;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/pic32mm_usb_curiosity;"/>
         <property key="false-conditionals" value="false"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>

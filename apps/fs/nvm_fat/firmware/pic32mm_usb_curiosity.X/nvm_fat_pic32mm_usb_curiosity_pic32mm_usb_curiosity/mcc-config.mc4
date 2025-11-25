@@ -25,7 +25,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32mm_usb_curiosity\configuration.h
   hash: cadeaf5653963686daf535728616afe8df48fdfd2a6a5102446008c7bb0f48bd
 - file: ..\src\config\pic32mm_usb_curiosity\definitions.h
-  hash: 15d6f172f4e948d8d7a46af27c44ba0f9ab6075fd65f377c3778482f861addee
+  hash: 88b70e724def2a6c7b58b569c564d512e3d16851f9ab87df9cb9d408fb7b09b8
 - file: ..\src\config\pic32mm_usb_curiosity\device.h
   hash: 4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442
 - file: ..\src\config\pic32mm_usb_curiosity\driver\driver.h

@@ -84,7 +84,6 @@
         <itemPath>async_usart_echo_pic32mm_usb_curiosity_pic32mm_usb_curiosity/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mm_usb_curiosity/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

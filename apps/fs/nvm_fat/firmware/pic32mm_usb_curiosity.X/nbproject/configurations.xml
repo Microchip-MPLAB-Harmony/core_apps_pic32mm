@@ -17,6 +17,7 @@
               <itemPath>../src/config/pic32mm_usb_curiosity/driver/memory/drv_memory_definitions.h</itemPath>
               <itemPath>../src/config/pic32mm_usb_curiosity/driver/memory/drv_memory_nvm.h</itemPath>
               <itemPath>../src/config/pic32mm_usb_curiosity/driver/memory/src/drv_memory_local.h</itemPath>
+              <itemPath>../src/config/pic32mm_usb_curiosity/driver/memory/src/drv_memory_file_system.h</itemPath>
             </logicalFolder>
             <itemPath>../src/config/pic32mm_usb_curiosity/driver/driver.h</itemPath>
             <itemPath>../src/config/pic32mm_usb_curiosity/driver/driver_common.h</itemPath>
@@ -99,7 +100,6 @@
         <itemPath>nvm_fat_pic32mm_usb_curiosity_pic32mm_usb_curiosity/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mm_usb_curiosity/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

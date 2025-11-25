@@ -2,8 +2,8 @@
 
 manifest_file_version: 1.0.0
 project: nvm_fat_pic32mm_usb_curiosity
-creation_date: 2025-09-23T10:03:55.337+00:00[UTC]
-operating_system: Windows 10
+creation_date: 2025-11-25T11:00:19.029+00:00[UTC]
+operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
 device_name: PIC32MM0256GPM064
