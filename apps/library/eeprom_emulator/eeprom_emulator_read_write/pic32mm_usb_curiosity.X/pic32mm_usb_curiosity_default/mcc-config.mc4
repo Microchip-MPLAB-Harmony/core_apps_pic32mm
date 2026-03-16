@@ -1,0 +1,95 @@
+configVersion: 1.0.0
+coreVersion: 5.8.2
+spaHostVersion: 1.0.0
+device: PIC32MM0256GPM064
+deviceLibrary:
+  className: null
+groupModules: []
+modules:
+- BSP_PIC32MM_USB_Curiosity
+- HarmonyCore
+- core
+- dfp
+- lib_emulated_eeprom
+- nvm
+generatedFileHashHistoryMap:
+- file: ..\src\app.c
+  hash: 632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620
+- file: ..\src\app.h
+  hash: 8e35d8509552a4d1d6e6f123ad75694cf784a707f7dac592ed33b55121aa8e28
+- file: ..\src\config\default\bsp\bsp.c
+  hash: 59a4074d9c0fd341f914c70a1685f71873d66fb46781c4d17d22d2f6a2e5600d
+- file: ..\src\config\default\bsp\bsp.h
+  hash: 0b881111b9e4401d10a2bf759540f9d3ecaa0a7aa03c226fe15a88b1f8d99b82
+- file: ..\src\config\default\configuration.h
+  hash: feb106abae40367e7ea5d7303f21f6a9a309234b629486e838202b786580acce
+- file: ..\src\config\default\definitions.h
+  hash: b93ad4328dbfaa14f4fabc17e7f9919f62803a3462a606f63fc66cb3808332cb
+- file: ..\src\config\default\device.h
+  hash: 4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442
+- file: ..\src\config\default\exceptions.c
+  hash: 277b822365dceb7e50cfb0b11c394adb81d0889dbda767550988817fee1cd9cd
+- file: ..\src\config\default\initialization.c
+  hash: e0fb26ab7ec230acc50e1289843d87f2d62d5fa44b26c6f101416e20ae331f08
+- file: ..\src\config\default\interrupts.c
+  hash: f34b79f9ed5fda3c7e5816165e80bcdc33e3a4e72953f12722c4da3c61224907
+- file: ..\src\config\default\interrupts.h
+  hash: bd51c3c5264a10459c01fabb79b440af80e049a39110c43f28566cb6a73fe3ed
+- file: ..\src\config\default\library\emulated_eeprom\emulated_eeprom.c
+  hash: 08531f7803ff71a25be8b9af6067ea23c4e734efcd59ed49da22b7381a74642c
+- file: ..\src\config\default\library\emulated_eeprom\emulated_eeprom.h
+  hash: 639e77263b3b2702305e08cd2747b2da5eefaa3bb89070ffc7ded5fd9a23d6b1
+- file: ..\src\config\default\library\emulated_eeprom\emulated_eeprom_definitions.h
+  hash: 31b9fadf28096e75c42c2e469d917c4e80f058213498f18d0c85e97fa83da01f
+- file: ..\src\config\default\library\emulated_eeprom\emulated_eeprom_local.h
+  hash: c2c3b2ed119ac6aa66efffc8ccc49a1108553cb1880e69a28d69e4d3828fa7d2
+- file: ..\src\config\default\osal\osal.h
+  hash: 1cfe3b61d9693b2369922041eef33fe16b3c1ccd9c85d4ded808b805f90a869c
+- file: ..\src\config\default\osal\osal_definitions.h
+  hash: 5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37
+- file: ..\src\config\default\osal\osal_impl_basic.h
+  hash: 158c4107f883f6d8c0244b73273361d1ca2ebd57c0934572b11a25c532fd22c5
+- file: ..\src\config\default\p32MM0256GPM064.ld
+  hash: 27f0c4872ab85faac358a7bb25b5e95f5515314aaee8a83042a5b48bffeceb4a
+- file: ..\src\config\default\peripheral\clk\plib_clk.c
+  hash: ae2ccbe79fca51db2c35855f856ae397e5abfa10a5d83c064d930faff2e47399
+- file: ..\src\config\default\peripheral\clk\plib_clk.h
+  hash: 35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255
+- file: ..\src\config\default\peripheral\evic\plib_evic.c
+  hash: 816b5de32703542351ca266bcaa5541981d84c00255eb5d8f98d3b2b5a231983
+- file: ..\src\config\default\peripheral\evic\plib_evic.h
+  hash: c3713e8874f82c773b96cc499054e6cf0b691f942b601e9487bd947d582f733c
+- file: ..\src\config\default\peripheral\gpio\plib_gpio.c
+  hash: 7fa90460f6ce0565b6e25b9ba9c44ce12271abbde1b86f3781193e899bd8bf1a
+- file: ..\src\config\default\peripheral\gpio\plib_gpio.h
+  hash: ef55b889aedfc59e020698ff0b992e12f48798c81356604315694995dfbf2657
+- file: ..\src\config\default\peripheral\nvm\plib_nvm.c
+  hash: d4cd9d750bd6e1623f7a9b7fa83a66c5ac6db425e5b9a0cf490f79be079a3db8
+- file: ..\src\config\default\peripheral\nvm\plib_nvm.h
+  hash: 6c3149449de91e4717a93a97ecf0c2c407d4aa1d778cc64bd9f4b5de561ccf8e
+- file: ..\src\config\default\stdio\xc32_monitor.c
+  hash: 858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a
+- file: ..\src\config\default\sys_tasks.h
+  hash: 21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56
+- file: ..\src\config\default\system\debug\sys_debug.h
+  hash: aa94da8f32cbcb40672145542d149d077ff8f4b25c08d47d53e3d206d1c6bb83
+- file: ..\src\config\default\system\int\src\sys_int.c
+  hash: 30ac5e334ca90204f545f1ab769ae26f421b910b3fb3be99354b364febceee64
+- file: ..\src\config\default\system\int\sys_int.h
+  hash: fefb49004838cb571a5a666fec46bfc0698e0004855ceee2f6d5a3121a4c4415
+- file: ..\src\config\default\system\int\sys_int_mapping.h
+  hash: 1348966c9213d64f9cb7184038e6f160172eb9dd4d75a45e3008a5c15bef648e
+- file: ..\src\config\default\system\system.h
+  hash: 2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55
+- file: ..\src\config\default\system\system_common.h
+  hash: c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984
+- file: ..\src\config\default\system\system_module.h
+  hash: 7bfe351ce506b843c61e5be013b6e3bf2a6253d73f5db189dbaf0c4f494cb75a
+- file: ..\src\config\default\tasks.c
+  hash: 36364a39e784157f4aac281dfecc1f19be971c9935e6299a6f37a78cd98d1d46
+- file: ..\src\config\default\toolchain_specifics.h
+  hash: f6f3282ecb4ad8b5ba3487b7d7b8f6cfa3f977240726af07eaab058caf904381
+- file: ..\src\config\default\user.h
+  hash: 451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995
+- file: ..\src\main.c
+  hash: d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5
